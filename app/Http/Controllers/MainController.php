@@ -16,4 +16,11 @@ class MainController extends Controller
         $typologies = Typology::all();
         return view('pages.home', compact(['categories', 'products', 'typologies']));
     }
+
+    public function productFirst(){
+        $products = Product::all();
+        $categories = Category::all();
+        $typologies = Typology::all();
+        return view('pages.product', compact(['categories', 'products', 'typologies']));
+    }
 }
