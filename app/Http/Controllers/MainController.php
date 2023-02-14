@@ -32,6 +32,26 @@ class MainController extends Controller
     }
 
     public function storeProduct(Request $request){
-        
+        $data = $request->validate([
+            'name' => 'required|string|max:64',
+            'description' => 'string|max:200',
+            'price' => 'required|integer',
+            'weight' => 'integer',
+            'typology_id' => 'required|integer',
+            'categories' => 'required|array'
+        ]);
+
+        $data['code'] = rand(10000000, 99999999);
+        $product = Product::make($data);
+
+        $typology = Typology::find($data['typology_id']);
+        $product->typology()->associate($typology);
+
+        $product->save();
+
+        $categories = Category::find($data['categories']);
+        $product->categories()->attach($categories);
+
+        return redirect()->route('home');
     }
 }

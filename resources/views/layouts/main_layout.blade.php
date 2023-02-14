@@ -10,6 +10,7 @@
 </head>
 <body>
     @include('components.header')
+    @include('components.errors')
     @yield('content')
 </body>
 </html>
