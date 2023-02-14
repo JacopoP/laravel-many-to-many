@@ -1,6 +1,7 @@
 @extends('layouts.main_layout')
 
 @section('content')
+    <a href="{{route('product.create')}}" class="px-5">CREATE NEW PRODUCT</a>   
     @foreach ($products as $product)
         <section class="px-5">
             <h2>{{$product->name}}</h2>

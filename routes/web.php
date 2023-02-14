@@ -10,3 +10,11 @@ Route::get('/', [MainController::class, 'home'])
 
 Route::get('/product', [MainController::class, 'productFirst'])
 ->name('product.home');
+
+
+Route::get('/product/create', [MainController::class, 'createProduct'])
+->name('product.create');
+
+
+Route::post('/product/store', [MainController::class, 'storeProduct'])
+->name('product.store');
