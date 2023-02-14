@@ -18,7 +18,7 @@ class TypologyFactory extends Factory
     {
         return [
             'code'=> fake()->unique()->regexify('[A-Z0-9]{8}'),
-            'name'=> fake()->unique()->word(3, false),
+            'name'=> fake()->unique()->words(3, true),
             'digital'=> fake()->boolean(),
         ];
     }
