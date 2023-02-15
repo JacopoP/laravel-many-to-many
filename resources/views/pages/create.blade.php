@@ -8,13 +8,13 @@
         <input class="form-control" type="text" name="name">
 
         <label class="form-label" for="description">description</label>
-        <textarea class="form-control" name="description" cols="30" rows="10"></textarea>
+        <textarea class="form-control" name="description" cols="30" rows="10">></textarea>
 
         <label class="form-label" for="price">Price</label>
         <input class="form-control" type="number" name="price">
 
         <label class="form-label" for="weight">Weight</label>
-        <input class="form-control" type="number" name="weight">
+        <input class="form-control" type="text" name="weight">
 
         <label class="form-label" for="typology_id">Typology</label>
         <select name="typology_id" class="form-select">

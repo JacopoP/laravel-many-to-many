@@ -25,6 +25,7 @@
                 @endforeach
             </ul>
             <h4><a class="text-danger" href="{{route('product.delete', $product)}}">DELETE PRODUCT</a></h4>
+            <h4><a class="text-primary" href="{{route('product.edit', $product)}}">EDIT PRODUCT</a></h4>
             <hr>
         </section>
     @endforeach   

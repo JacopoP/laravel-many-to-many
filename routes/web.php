@@ -21,3 +21,9 @@ Route::post('/product/store', [MainController::class, 'storeProduct'])
 
 Route::get('/product/delete/{product}', [MainController::class, 'deleteProduct'])
 ->name('product.delete');
+
+Route::get('/product/edit/{product}', [MainController::class, 'editProduct'])
+->name('product.edit');
+
+Route::post('/product/save/{product}', [MainController::class, 'saveProduct'])
+->name('product.save');
