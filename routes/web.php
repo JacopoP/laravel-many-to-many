@@ -18,3 +18,6 @@ Route::get('/product/create', [MainController::class, 'createProduct'])
 
 Route::post('/product/store', [MainController::class, 'storeProduct'])
 ->name('product.store');
+
+Route::get('/product/delete/{product}', [MainController::class, 'deleteProduct'])
+->name('product.delete');

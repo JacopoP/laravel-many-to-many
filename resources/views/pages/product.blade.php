@@ -24,6 +24,7 @@
                     <li>{{$category->name}}, {{$category->code}}</li>
                 @endforeach
             </ul>
+            <h4><a class="text-danger" href="{{route('product.delete', $product)}}">DELETE PRODUCT</a></h4>
             <hr>
         </section>
     @endforeach   
